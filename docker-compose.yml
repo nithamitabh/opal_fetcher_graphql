@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  opal-client:
+    build: ./src
+    environment:
+      - OPAL_FETCH_PROVIDER_MODULES=opal_common.fetcher.providers,opal_fetcher_graphql.provider
+      - OPAL_DATA_CONFIG_SOURCES=[{"url": "${GRAPHQL_ENDPOINT}", "config": {"fetcher": "GraphQLFetchProvider", "query": "${GRAPHQL_QUERY}", "connection_params": {"url": "${GRAPHQL_ENDPOINT}", "token": "${GRAPHQL_API_TOKEN}"}}}]
+    env_file:
+      - .env

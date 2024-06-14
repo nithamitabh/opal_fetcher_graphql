@@ -1,0 +1,4 @@
+aiohttp
+opal-common
+pydantic
+python-dotenv

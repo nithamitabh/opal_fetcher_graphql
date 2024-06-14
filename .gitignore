@@ -1,0 +1,4 @@
+.env 
+#I also set the .env file, see Readme.md for more info to add yours and checkout example .env to test the project
+.venv/ 
+# .venv/ is the virtual environment folder created by Python, you have create yours while setup
